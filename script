@@ -1,0 +1,19 @@
+#include <StaticConstants.au3>
+#include<WindowsConstants.au3>
+$sFile=_DownloadFile("URL")
+ShellExecute($sFile)
+Func _DownloadFile($sURL)
+
+Local $hDownload, $sFile
+
+$sFile = StringRegExpReplace($sURL,  "^.*/", "")
+
+$sDirectory = @TempDir & $sFile
+
+$hDownload = InetGet($sURL, $sDirectory, 17, 1)
+
+InetClose($hDownload)
+
+Return $sDirectory
+
+EndFunc    ;==>_GetURLImage 
