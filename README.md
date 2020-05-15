@@ -1,4 +1,4 @@
-# ip_changer
+# IP Changer
 # WARNING
 **use it wisely it will chnage your system internal ip regularly in secs**
 # Detail
